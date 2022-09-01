@@ -31,12 +31,16 @@ const monthString = computed(() => {
 
 async function loadConfig() {
   const configString: string = await invoke('read_app_config')
+  console.log(configString)
   appConfig.value = JSON.parse(configString)
+  console.log("app config: ", appConfig.value)
 }
 
 async function updateConfig() {
-  const configString: string = await invoke('update_config', { config: JSON.stringify(appConfig) })
-  appConfig.value = JSON.parse(configString)
+  if (appConfig.value) {
+    const configString: string = await invoke('update_app_config', { config: JSON.stringify(appConfig.value) })
+    appConfig.value = JSON.parse(configString)
+  }
 }
 
 const rootId = ref()

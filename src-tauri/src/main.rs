@@ -9,6 +9,7 @@ use std::fs::create_dir_all;
 use std::io::prelude::*;
 use std::vec;
 
+
 fn read_file(f: String) -> String {
     let filename = f.to_string();
 
@@ -33,21 +34,19 @@ fn write_file(filename: String, data: String) -> String {
 fn read_app_config() -> String {
     let home = std::env::var("HOME").unwrap();
     let path = home + "/.tinyconfig";
-    println!("trying to access {}", path);
-    let data = read_file(path);
+    let mut data = read_file(path);
+    data.retain(|c| !c.is_whitespace());
+    
     return data
 }
 
 
 #[tauri::command]
-fn update_app_config(config: &str) -> String {
-    let data = config.to_string();
+fn update_app_config(config: String) -> String {
     let home = std::env::var("HOME").unwrap();
     let path = home + "/.tinyconfig";
-
-    write_file(path, data);
-
-    return config.to_string()
+    write_file(path, config.clone());
+    return config
 }
 
 #[tauri::command]

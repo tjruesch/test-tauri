@@ -20,49 +20,49 @@
                 "label": "arbeitsdateien",
                 "displayName": "Arbeitsdateien",
                 "include": true,
-                "description": "Dieser Ordner ist für ..."
+                "description": "(Hilfs-)Dateien i.d.R. Bilder, Ad-Banner, Diagramme etc. (z.B. psd, ppt)"
             },
             {
                 "label": "preview",
                 "displayName": "Preview",
                 "include": true,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Noch nicht lizenzierte Adobe Stock Bilder"
             },
             {
                 "label": "dokumente",
                 "displayName": "Dokumente",
                 "include": true,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Layoutdaten -  Druckdaten -  fertige Dateivorlagen (z.B. indd, PDF, docx, ppt)"
             },
             {
                 "label": "geliefert",
                 "displayName": "Geliefert",
                 "include": true,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Alle zugesendeten Dateien, gezippt nach Input_V01.zip, Input_V02.zip, ..."
             },
             {
                 "label": "webbilder",
                 "displayName": "Webbilder",
                 "include": false,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Grafiken und Bilder, die fur den Online-Bereich optimiert wurden (z.B. jpg, png, svg)"
             },
             {
                 "label": "links",
                 "displayName": "Links",
                 "include": false,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Verknüpfte Dateien fur die Dokumente (i.d.R. fur indd)"
             },
             {
                 "label": "briefing",
                 "displayName": "Briefing",
                 "include": false,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Alle Dateien, die das Projekt beschreiben"
             },
             {
                 "label": "vorgaben",
                 "displayName": "Vorgaben",
                 "include": false,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Rahmenbedingungen -  Stanzen und Spezifikationen der Druckerei -  Wichtige Hinweise"
             }
         ],
         "print": [
@@ -70,49 +70,49 @@
                 "label": "arbeitsdateien",
                 "displayName": "Arbeitsdateien",
                 "include": true,
-                "description": "Dieser Ordner ist für ..."
+                "description": "(Hilfs-)Dateien i.d.R. Bilder, Ad-Banner, Diagramme etc. (z.B. psd, ppt)"
             },
             {
                 "label": "preview",
                 "displayName": "Preview",
                 "include": true,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Noch nicht lizenzierte Adobe Stock Bilder"
             },
             {
                 "label": "dokumente",
                 "displayName": "Dokumente",
                 "include": true,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Layoutdaten -  Druckdaten -  fertige Dateivorlagen (z.B. indd, PDF, docx, ppt)"
             },
             {
                 "label": "geliefert",
                 "displayName": "Geliefert",
                 "include": true,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Alle zugesendeten Dateien, gezippt nach Input_V01.zip, Input_V02.zip, ..."
             },
             {
                 "label": "webbilder",
                 "displayName": "Webbilder",
                 "include": false,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Grafiken und Bilder, die fur den Online-Bereich optimiert wurden (z.B. jpg, png, svg)"
             },
             {
                 "label": "links",
                 "displayName": "Links",
                 "include": false,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Verknüpfte Dateien fur die Dokumente (i.d.R. fur indd)"
             },
             {
                 "label": "briefing",
                 "displayName": "Briefing",
                 "include": false,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Alle Dateien, die das Projekt beschreiben"
             },
             {
                 "label": "vorgaben",
                 "displayName": "Vorgaben",
                 "include": false,
-                "description": "Dieser Ordner ist für ..."
+                "description": "Rahmenbedingungen -  Stanzen und Spezifikationen der Druckerei -  Wichtige Hinweise"
             }
         ]
     },
