@@ -1,0 +1,120 @@
+{
+    "baseDir": "/Users/gtnadmin/Desktop/",
+    "typeSelections": [
+        "ANS",
+        "ANZ",
+        "BAN",
+        "BRO",
+        "DES",
+        "FLY",
+        "KAL",
+        "LP",
+        "NL",
+        "PK",
+        "PLK",
+        "UMS"
+    ],
+    "presets": {
+        "web": [
+            {
+                "label": "arbeitsdateien",
+                "displayName": "Arbeitsdateien",
+                "include": true,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "preview",
+                "displayName": "Preview",
+                "include": true,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "dokumente",
+                "displayName": "Dokumente",
+                "include": true,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "geliefert",
+                "displayName": "Geliefert",
+                "include": true,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "webbilder",
+                "displayName": "Webbilder",
+                "include": false,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "links",
+                "displayName": "Links",
+                "include": false,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "briefing",
+                "displayName": "Briefing",
+                "include": false,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "vorgaben",
+                "displayName": "Vorgaben",
+                "include": false,
+                "description": "Dieser Ordner ist für ..."
+            }
+        ],
+        "print": [
+            {
+                "label": "arbeitsdateien",
+                "displayName": "Arbeitsdateien",
+                "include": true,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "preview",
+                "displayName": "Preview",
+                "include": true,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "dokumente",
+                "displayName": "Dokumente",
+                "include": true,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "geliefert",
+                "displayName": "Geliefert",
+                "include": true,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "webbilder",
+                "displayName": "Webbilder",
+                "include": false,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "links",
+                "displayName": "Links",
+                "include": false,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "briefing",
+                "displayName": "Briefing",
+                "include": false,
+                "description": "Dieser Ordner ist für ..."
+            },
+            {
+                "label": "vorgaben",
+                "displayName": "Vorgaben",
+                "include": false,
+                "description": "Dieser Ordner ist für ..."
+            }
+        ]
+    },
+    "currentId": 340012
+}

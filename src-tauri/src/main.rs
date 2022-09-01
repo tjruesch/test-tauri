@@ -3,39 +3,66 @@
     windows_subsystem = "windows"
 )]
 
-use tauri::api::shell;
-use tauri::{CustomMenuItem, Manager, Menu, Submenu};
+
+use std::fs::File;
+use std::fs::create_dir_all;
+use std::io::prelude::*;
+use std::vec;
+
+fn read_file(f: String) -> String {
+    let filename = f.to_string();
+
+    let mut file = File::open(filename)
+        .expect("File not found");
+    let mut data = String::new();
+    file.read_to_string(&mut data)
+        .expect("Error while reading file");
+
+    return data;
+}
+
+fn write_file(filename: String, data: String) -> String {
+    let mut file = File::create(filename)
+        .expect("File not found");
+    file.write_all(data.as_bytes())
+        .expect("Error writing to file");
+    return data;
+}
 
 #[tauri::command]
-fn backend_add(number: i32) -> i32 {
-    println!("Backend was called with an argument: {}", number);
-    return number + 2;
+fn read_app_config() -> String {
+    let home = std::env::var("HOME").unwrap();
+    let path = home + "/.tinyconfig";
+    println!("trying to access {}", path);
+    let data = read_file(path);
+    return data
+}
+
+
+#[tauri::command]
+fn update_app_config(config: &str) -> String {
+    let data = config.to_string();
+    let home = std::env::var("HOME").unwrap();
+    let path = home + "/.tinyconfig";
+
+    write_file(path, data);
+
+    return config.to_string()
+}
+
+#[tauri::command]
+fn create_folder(folder: String) {
+    create_dir_all(folder)
+        .expect("Error creating folder");
 }
 
 fn main() {
     let ctx = tauri::generate_context!();
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![backend_add])
+        .invoke_handler(tauri::generate_handler![read_app_config, update_app_config, create_folder])
         .menu(
-            tauri::Menu::os_default("Tauri Vue Template").add_submenu(Submenu::new(
-                "Help",
-                Menu::with_items([CustomMenuItem::new(
-                    "Online Documentation",
-                    "Online Documentation",
-                )
-                .into()]),
-            )),
+            tauri::Menu::os_default("Tiny Tools")
         )
-        .on_menu_event(|event| {
-            let event_name = event.menu_item_id();
-            match event_name {
-                "Online Documentation" => {
-                    let url = "https://github.com/Uninen/tauri-vue-template".to_string();
-                    shell::open(&event.window().shell_scope(), url, None).unwrap();
-                }
-                _ => {}
-            }
-        })
         .run(ctx)
         .expect("error while running tauri application");
 }
